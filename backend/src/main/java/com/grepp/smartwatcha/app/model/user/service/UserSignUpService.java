@@ -1,10 +1,10 @@
-package com.grepp.smartwatcha.app.service;
+package com.grepp.smartwatcha.app.model.user.service;
 
-import com.grepp.smartwatcha.app.model.SignUpRequest;
+import com.grepp.smartwatcha.app.model.user.SignUpRequest;
 import com.grepp.smartwatcha.infra.jpa.entity.UserEntity;
-import com.grepp.smartwatcha.infra.jpa.repository.UserRepository;
+import com.grepp.smartwatcha.app.model.user.repository.UserJpaRepository;
 import com.grepp.smartwatcha.infra.jpa.enums.Role;
-import com.grepp.smartwatcha.infra.jpa.repository.EmailVerificationRepository;
+import com.grepp.smartwatcha.app.model.user.repository.EmailVerificationJpaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -13,9 +13,9 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @RequiredArgsConstructor
 public class UserSignUpService {
-    private final UserRepository userRepository;
+    private final UserJpaRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    private final EmailVerificationRepository emailVerificationRepository;
+    private final EmailVerificationJpaRepository emailVerificationRepository;
 
     @Transactional
     public Long signUp(SignUpRequest request) {

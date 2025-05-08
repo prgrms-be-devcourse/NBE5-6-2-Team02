@@ -1,7 +1,7 @@
-package com.grepp.smartwatcha.app.controller.api;
+package com.grepp.smartwatcha.app.controller.api.user;
 
-import com.grepp.smartwatcha.app.model.SignUpRequest;
-import com.grepp.smartwatcha.app.service.UserSignUpService;
+import com.grepp.smartwatcha.app.model.user.SignUpRequest;
+import com.grepp.smartwatcha.app.model.user.service.UserSignUpService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/signup")
 @RequiredArgsConstructor
-public class UserSignUpController {
+public class UserSignUpApiController {
     private final UserSignUpService userSignUpService;
 
     @PostMapping

@@ -1,4 +1,4 @@
-package com.grepp.smartwatcha.app.model;
+package com.grepp.smartwatcha.app.model.user;
 
 import lombok.Getter;
 import lombok.Setter;

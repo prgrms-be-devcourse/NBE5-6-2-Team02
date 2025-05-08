@@ -1,10 +1,9 @@
-package com.grepp.smartwatcha.app.service;
+package com.grepp.smartwatcha.app.model.user.service;
 
-import com.grepp.smartwatcha.app.model.EmailVerificationRequest;
-import com.grepp.smartwatcha.app.model.EmailCodeVerifyRequest;
+import com.grepp.smartwatcha.app.model.user.EmailVerificationRequest;
+import com.grepp.smartwatcha.app.model.user.EmailCodeVerifyRequest;
 import com.grepp.smartwatcha.infra.jpa.entity.EmailVerificationEntity;
-import com.grepp.smartwatcha.infra.jpa.repository.EmailVerificationRepository;
-import jakarta.transaction.Transactional;
+import com.grepp.smartwatcha.app.model.user.repository.EmailVerificationJpaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
@@ -17,7 +16,7 @@ import java.util.Random;
 @Service
 @RequiredArgsConstructor
 public class EmailVerificationService {
-    private final EmailVerificationRepository emailVerificationRepository;
+    private final EmailVerificationJpaRepository emailVerificationRepository;
     private final JavaMailSender mailSender;
 
     @Value("${app.email.verification.expire-minutes:10}")
