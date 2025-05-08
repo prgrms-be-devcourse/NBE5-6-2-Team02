@@ -1,8 +1,8 @@
 package com.grepp.smartwatcha.app.model.auth;
 
+import com.grepp.smartwatcha.app.model.user.repository.UserJpaRepository;
 import com.grepp.smartwatcha.infra.jpa.entity.UserEntity;
 
-import com.grepp.smartwatcha.app.model.user.UserJpaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
