@@ -27,7 +27,7 @@ public class CustomUserDetailsService implements UserDetailsService {
   public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
     UserEntity user = userRepository.findByEmail(email)
         .orElseThrow(() -> {
-          log.warn("🔒 [인증 실패] 존재하지 않는 이메일로 로그인 시도: {}", email);
+          log.info("🔒 [인증 실패] 존재하지 않는 이메일로 로그인 시도: {}", email);
           return new CommonException(ResponseCode.UNAUTHORIZED);
         });
 

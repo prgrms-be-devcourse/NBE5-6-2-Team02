@@ -22,7 +22,7 @@ public class CustomLoginFailureHandler implements AuthenticationFailureHandler {
       AuthenticationException exception) throws IOException {
 
     // 로그인 실패 사유 로깅
-    log.warn("🔒 [로그인 실패] {}", exception.getMessage());
+    log.info("🔒 [로그인 실패] {}", exception.getMessage());
 
     // 로그인 페이지로 리다이렉트 (에러 플래그 포함)
     response.sendRedirect("/login?error=true");
