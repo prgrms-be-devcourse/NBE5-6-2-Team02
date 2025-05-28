@@ -12,9 +12,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 // Spring Security 의 사용자 인증 과정에서 사용되는 커스텀 UserDetailsService 구현체
-// - 입력받은 이메일(email)로 DB에서 유저 정보를 조회
-// - 존재하지 않을 경우 CommonException(UNAUTHORIZED) 예외 발생
-// - 존재할 경우 CustomUserDetails 객체로 변환하여 반환
+  // - 입력받은 이메일(email)로 DB에서 유저 정보를 조회
+  // - 존재하지 않을 경우 CommonException(UNAUTHORIZED) 예외 발생
+  // - 존재할 경우 CustomUserDetails 객체로 변환하여 반환
 
 @Slf4j
 @Service

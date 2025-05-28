@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 
 // Spring Security 로그인 실패 시 동작하는 핸들러
 // 기능:
-// - 로그인 실패 원인을 로그로 기록
-// - 로그인 페이지로 리다이렉트하며 쿼리 파라미터로 오류 표시
+  // - 로그인 실패 원인을 로그로 기록
+  // - 로그인 페이지로 리다이렉트하며 쿼리 파라미터로 오류 표시
 
 @Slf4j
 @Component
