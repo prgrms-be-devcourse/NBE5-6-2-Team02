@@ -30,7 +30,7 @@ public class AdminUserRatingJpaService {
     return ratingPage.map(this::toDto);
   }
 
-  // RatingEntity 를 AdminRatingDto 로 변환
+  // RatingEntity → AdminRatingDto 로 변환
   private AdminRatingDto toDto(RatingEntity rating) {
     Long userId = rating.getUser().getId();
     Long movieId = rating.getMovie().getId();
